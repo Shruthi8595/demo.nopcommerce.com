@@ -5,7 +5,6 @@ atomicwrites==1.4.0
 attrs==21.2.0
 autoit==0.2.3
 beautifulsoup4==4.9.3
-certifi==2020.12.5
 chardet==4.0.0
 chromedriver-py==90.0.4430.24
 clipboard==0.0.4
@@ -16,11 +15,8 @@ enum34==1.1.10
 Faker==8.1.4
 idna==2.10
 iniconfig==1.1.1
-lxml==4.6.3
 namedlist==1.8
-numpy==1.20.3
 packaging==20.9
-pandas==1.2.4
 pluggy==0.13.1
 py==1.10.0
 pynput==1.7.3
@@ -30,7 +26,6 @@ pytest==6.2.4
 pytest-allure-adaptor==1.7.10
 python-dateutil==2.8.1
 pytz==2021.1
-pywin32==301
 requests==2.25.1
 robotframework==4.0.2
 robotframework-allurereport==1.1.1
