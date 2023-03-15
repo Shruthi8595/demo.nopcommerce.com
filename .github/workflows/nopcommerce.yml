@@ -28,7 +28,6 @@ jobs:
     
     - name: run tests
       run: |
-        Remove-Item -Path .\Browser -Force -Recurse
         invoke TestCases-robot 
           
     - name: Upload test results
