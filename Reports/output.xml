@@ -1,0 +1,626 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0 (Python 3.10.4 on win32)" generated="20230315 12:03:02.074" rpa="false" schemaversion="3">
+<suite id="s1" name="TestCases" source="C:\Users\91994\PycharmProjects\demo_nopcommerce\TestCases">
+<suite id="s1-s1" name="InvalidLoginCredentialsTestCases" source="C:\Users\91994\PycharmProjects\demo_nopcommerce\TestCases\InvalidLoginCredentialsTestCases.robot">
+<kw name="Launch Login Page" library="SetupAndTeardown" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${loginUrl}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230315 12:03:04.407" level="INFO">Opening browser 'Chrome' to base url 'https://demo.nopcommerce.com/login'.</msg>
+<status status="PASS" starttime="20230315 12:03:04.402" endtime="20230315 12:03:09.399"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230315 12:03:09.399" endtime="20230315 12:03:09.535"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Welcome, Please Sign In!</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20230315 12:03:09.535" endtime="20230315 12:03:09.559"/>
+</kw>
+<kw name="Set Screenshot Directory" library="SeleniumLibrary">
+<arg>ScreenShots</arg>
+<doc>Sets the directory for captured screenshots.</doc>
+<status status="PASS" starttime="20230315 12:03:09.559" endtime="20230315 12:03:09.560"/>
+</kw>
+<status status="PASS" starttime="20230315 12:03:04.402" endtime="20230315 12:03:09.560"/>
+</kw>
+<test id="s1-s1-t1" name="LoginTestWithExcel using" line="17">
+<kw name="Verify Login Page for Invalid Credentials">
+<arg>shruthi@gmail</arg>
+<arg>shruthi</arg>
+<kw name="Enter UserName" library="LoginPage">
+<arg>${username}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${text_username}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230315 12:03:09.568" level="INFO">Typing text 'shruthi@gmail' into text field 'xpath://input[@class='email']'.</msg>
+<status status="PASS" starttime="20230315 12:03:09.566" endtime="20230315 12:03:10.152"/>
+</kw>
+<status status="PASS" starttime="20230315 12:03:09.565" endtime="20230315 12:03:10.152"/>
+</kw>
+<kw name="Enter Password" library="LoginPage">
+<arg>${password}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${text_password}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230315 12:03:10.156" level="INFO">Typing text 'shruthi' into text field 'xpath://input[@class='password']'.</msg>
+<status status="PASS" starttime="20230315 12:03:10.156" endtime="20230315 12:03:10.570"/>
+</kw>
+<status status="PASS" starttime="20230315 12:03:10.152" endtime="20230315 12:03:10.570"/>
+</kw>
+<kw name="Click Login" library="LoginPage">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${button_Login}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230315 12:03:10.570" level="INFO">Clicking button 'xpath://button[@class='button-1 login-button']'.</msg>
+<status status="PASS" starttime="20230315 12:03:10.570" endtime="20230315 12:03:12.050"/>
+</kw>
+<status status="PASS" starttime="20230315 12:03:10.570" endtime="20230315 12:03:12.050"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Login was unsuccessful. Please correct the errors and try again.</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20230315 12:03:12.121" level="INFO">Current page contains text 'Login was unsuccessful. Please correct the errors and try again.'.</msg>
+<status status="PASS" starttime="20230315 12:03:12.050" endtime="20230315 12:03:12.121"/>
+</kw>
+<status status="PASS" starttime="20230315 12:03:09.564" endtime="20230315 12:03:12.122"/>
+</kw>
+<status status="PASS" starttime="20230315 12:03:09.560" endtime="20230315 12:03:12.122"/>
+</test>
+<test id="s1-s1-t2" name="LoginTestWithExcel using" line="17">
+<kw name="Verify Login Page for Invalid Credentials">
+<arg>123@gmail</arg>
+<arg>123</arg>
+<kw name="Enter UserName" library="LoginPage">
+<arg>${username}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${text_username}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230315 12:03:12.137" level="INFO">Typing text '123@gmail' into text field 'xpath://input[@class='email']'.</msg>
+<status status="PASS" starttime="20230315 12:03:12.137" endtime="20230315 12:03:12.396"/>
+</kw>
+<status status="PASS" starttime="20230315 12:03:12.137" endtime="20230315 12:03:12.397"/>
+</kw>
+<kw name="Enter Password" library="LoginPage">
+<arg>${password}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${text_password}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230315 12:03:12.397" level="INFO">Typing text '123' into text field 'xpath://input[@class='password']'.</msg>
+<status status="PASS" starttime="20230315 12:03:12.397" endtime="20230315 12:03:12.674"/>
+</kw>
+<status status="PASS" starttime="20230315 12:03:12.397" endtime="20230315 12:03:12.674"/>
+</kw>
+<kw name="Click Login" library="LoginPage">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${button_Login}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230315 12:03:12.674" level="INFO">Clicking button 'xpath://button[@class='button-1 login-button']'.</msg>
+<status status="PASS" starttime="20230315 12:03:12.674" endtime="20230315 12:03:13.546"/>
+</kw>
+<status status="PASS" starttime="20230315 12:03:12.674" endtime="20230315 12:03:13.546"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Login was unsuccessful. Please correct the errors and try again.</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20230315 12:03:13.596" level="INFO">Current page contains text 'Login was unsuccessful. Please correct the errors and try again.'.</msg>
+<status status="PASS" starttime="20230315 12:03:13.549" endtime="20230315 12:03:13.596"/>
+</kw>
+<status status="PASS" starttime="20230315 12:03:12.137" endtime="20230315 12:03:13.600"/>
+</kw>
+<status status="PASS" starttime="20230315 12:03:12.133" endtime="20230315 12:03:13.602"/>
+</test>
+<test id="s1-s1-t3" name="LoginTestWithExcel using" line="17">
+<kw name="Verify Login Page for Invalid Credentials">
+<arg>23ab$#@gmail</arg>
+<arg>23ab$#</arg>
+<kw name="Enter UserName" library="LoginPage">
+<arg>${username}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${text_username}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230315 12:03:13.620" level="INFO">Typing text '23ab$#@gmail' into text field 'xpath://input[@class='email']'.</msg>
+<status status="PASS" starttime="20230315 12:03:13.618" endtime="20230315 12:03:14.000"/>
+</kw>
+<status status="PASS" starttime="20230315 12:03:13.616" endtime="20230315 12:03:14.000"/>
+</kw>
+<kw name="Enter Password" library="LoginPage">
+<arg>${password}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${text_password}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230315 12:03:14.000" level="INFO">Typing text '23ab$#' into text field 'xpath://input[@class='password']'.</msg>
+<status status="PASS" starttime="20230315 12:03:14.000" endtime="20230315 12:03:14.325"/>
+</kw>
+<status status="PASS" starttime="20230315 12:03:14.000" endtime="20230315 12:03:14.325"/>
+</kw>
+<kw name="Click Login" library="LoginPage">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${button_Login}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230315 12:03:14.325" level="INFO">Clicking button 'xpath://button[@class='button-1 login-button']'.</msg>
+<status status="PASS" starttime="20230315 12:03:14.325" endtime="20230315 12:03:15.207"/>
+</kw>
+<status status="PASS" starttime="20230315 12:03:14.325" endtime="20230315 12:03:15.207"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Login was unsuccessful. Please correct the errors and try again.</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20230315 12:03:15.264" level="INFO">Current page contains text 'Login was unsuccessful. Please correct the errors and try again.'.</msg>
+<status status="PASS" starttime="20230315 12:03:15.207" endtime="20230315 12:03:15.264"/>
+</kw>
+<status status="PASS" starttime="20230315 12:03:13.606" endtime="20230315 12:03:15.264"/>
+</kw>
+<status status="PASS" starttime="20230315 12:03:13.606" endtime="20230315 12:03:15.272"/>
+</test>
+<kw name="Close Test" library="SetupAndTeardown" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230315 12:03:15.275" endtime="20230315 12:03:17.639"/>
+</kw>
+<status status="PASS" starttime="20230315 12:03:15.275" endtime="20230315 12:03:17.640"/>
+</kw>
+<doc>Verify the Login Functionality with Invalid Login Credentials</doc>
+<status status="PASS" starttime="20230315 12:03:02.137" endtime="20230315 12:03:17.640"/>
+</suite>
+<suite id="s1-s2" name="RegistrationPageTestCase" source="C:\Users\91994\PycharmProjects\demo_nopcommerce\TestCases\RegistrationPageTestCase.robot">
+<kw name="Launch Browser" library="SetupAndTeardown" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230315 12:03:17.716" level="INFO">Opening browser 'Chrome' to base url 'https://demo.nopcommerce.com/'.</msg>
+<status status="PASS" starttime="20230315 12:03:17.715" endtime="20230315 12:03:23.023"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230315 12:03:23.031" endtime="20230315 12:03:23.223"/>
+</kw>
+<kw name="Set Screenshot Directory" library="SeleniumLibrary">
+<arg>ScreenShots</arg>
+<doc>Sets the directory for captured screenshots.</doc>
+<status status="PASS" starttime="20230315 12:03:23.223" endtime="20230315 12:03:23.223"/>
+</kw>
+<status status="PASS" starttime="20230315 12:03:17.700" endtime="20230315 12:03:23.228"/>
+</kw>
+<test id="s1-s2-t1" name="Scenario_1 : Click On the Registration link and Verify the Page Title" line="21">
+<kw name="Click On Registration Link" library="RegistrationPage">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>${link_Register}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20230315 12:03:23.232" level="INFO">Clicking link 'link:Register'.</msg>
+<status status="PASS" starttime="20230315 12:03:23.232" endtime="20230315 12:03:24.955"/>
+</kw>
+<status status="PASS" starttime="20230315 12:03:23.232" endtime="20230315 12:03:24.955"/>
+</kw>
+<kw name="Verify the Title of the Page" library="CommonKeywords">
+<arg>nopCommerce demo store. Register</arg>
+<kw name="Get Title" library="SeleniumLibrary">
+<var>${actualTitle}</var>
+<doc>Returns the title of the current page.</doc>
+<msg timestamp="20230315 12:03:24.987" level="INFO">${actualTitle} = nopCommerce demo store. Register</msg>
+<status status="PASS" starttime="20230315 12:03:24.958" endtime="20230315 12:03:24.987"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${expectedTitle}</arg>
+<arg>${actualTitle}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230315 12:03:24.987" endtime="20230315 12:03:24.987"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Expected Title : ${expectedTitle} and Actual Title : ${actualTitle}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230315 12:03:24.987" level="INFO">Expected Title : nopCommerce demo store. Register and Actual Title : nopCommerce demo store. Register</msg>
+<status status="PASS" starttime="20230315 12:03:24.987" endtime="20230315 12:03:24.987"/>
+</kw>
+<status status="PASS" starttime="20230315 12:03:24.958" endtime="20230315 12:03:24.987"/>
+</kw>
+<doc>Click On the Registration link and Verify Page Title</doc>
+<tag>SmokeTesting</tag>
+<status status="PASS" starttime="20230315 12:03:23.229" endtime="20230315 12:03:24.987"/>
+</test>
+<test id="s1-s2-t2" name="Scenario_2 : Fetch All the Links in the Currnet Page" line="28">
+<kw name="Fetch the all the Links in Page" library="RegistrationPage">
+<kw name="Get WebElements" library="SeleniumLibrary">
+<var>@{weElements}</var>
+<arg>${allLinksOfCurrentPage}</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<msg timestamp="20230315 12:03:25.080" level="INFO">@{weElements} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="e3d5f07074dd03ad86aaff21ee7f7d28", element="6ee921b4-7637-4f9c-b65a-25575aa68f48")&gt; | &lt;selenium.webdriver.remote.webelement.WebElement (ses...</msg>
+<status status="PASS" starttime="20230315 12:03:25.002" endtime="20230315 12:03:25.080"/>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${countOfLinks}</var>
+<arg>${allLinksOfCurrentPage}</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20230315 12:03:25.121" level="INFO">${countOfLinks} = 60</msg>
+<status status="PASS" starttime="20230315 12:03:25.080" endtime="20230315 12:03:25.121"/>
+</kw>
+<for flavor="IN">
+<var>${element}</var>
+<value>@{weElements}</value>
+<iter>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="e3d5f07074dd03ad86aaff21ee7f7d28", element="6ee921b4-7637-4f9c-b65a-25575aa68f48")&gt;</var>
+<kw name="Wait and Get Text" library="CommonKeywords">
+<var>${actualtext}</var>
+<arg>${element}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230315 12:03:25.135" endtime="20230315 12:03:25.208"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${actualtext}</var>
+<arg>${locator}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230315 12:03:25.281" level="INFO">${actualtext} = Register</msg>
+<status status="PASS" starttime="20230315 12:03:25.208" endtime="20230315 12:03:25.281"/>
+</kw>
+<msg timestamp="20230315 12:03:25.281" level="INFO">${actualtext} = Register</msg>
+<status status="PASS" starttime="20230315 12:03:25.121" endtime="20230315 12:03:25.289"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>All Links Of Current Page : ${actualtext}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230315 12:03:25.291" level="INFO">All Links Of Current Page : Register</msg>
+<status status="PASS" starttime="20230315 12:03:25.289" endtime="20230315 12:03:25.291"/>
+</kw>
+<status status="PASS" starttime="20230315 12:03:25.121" endtime="20230315 12:03:25.291"/>
+</iter>
+<iter>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="e3d5f07074dd03ad86aaff21ee7f7d28", element="1ea331f2-5eca-4ec6-8185-6a08c9e2b4ae")&gt;</var>
+<kw name="Wait and Get Text" library="CommonKeywords">
+<var>${actualtext}</var>
+<arg>${element}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230315 12:03:25.291" endtime="20230315 12:03:25.362"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${actualtext}</var>
+<arg>${locator}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230315 12:03:25.436" level="INFO">${actualtext} = Log in</msg>
+<status status="PASS" starttime="20230315 12:03:25.362" endtime="20230315 12:03:25.436"/>
+</kw>
+<msg timestamp="20230315 12:03:25.436" level="INFO">${actualtext} = Log in</msg>
+<status status="PASS" starttime="20230315 12:03:25.291" endtime="20230315 12:03:25.436"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>All Links Of Current Page : ${actualtext}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230315 12:03:25.436" level="INFO">All Links Of Current Page : Log in</msg>
+<status status="PASS" starttime="20230315 12:03:25.436" endtime="20230315 12:03:25.436"/>
+</kw>
+<status status="PASS" starttime="20230315 12:03:25.291" endtime="20230315 12:03:25.436"/>
+</iter>
+<iter>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="e3d5f07074dd03ad86aaff21ee7f7d28", element="b29abca0-b7dd-4a70-a80d-27750cce25d3")&gt;</var>
+<kw name="Wait and Get Text" library="CommonKeywords">
+<var>${actualtext}</var>
+<arg>${element}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230315 12:03:25.446" endtime="20230315 12:03:25.492"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${actualtext}</var>
+<arg>${locator}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230315 12:03:25.571" level="INFO">${actualtext} = Wishlist (0)</msg>
+<status status="PASS" starttime="20230315 12:03:25.492" endtime="20230315 12:03:25.571"/>
+</kw>
+<msg timestamp="20230315 12:03:25.571" level="INFO">${actualtext} = Wishlist (0)</msg>
+<status status="PASS" starttime="20230315 12:03:25.436" endtime="20230315 12:03:25.571"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>All Links Of Current Page : ${actualtext}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230315 12:03:25.578" level="INFO">All Links Of Current Page : Wishlist (0)</msg>
+<status status="PASS" starttime="20230315 12:03:25.571" endtime="20230315 12:03:25.578"/>
+</kw>
+<status status="PASS" starttime="20230315 12:03:25.436" endtime="20230315 12:03:25.578"/>
+</iter>
+<iter>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="e3d5f07074dd03ad86aaff21ee7f7d28", element="454c42dc-7dc6-4d3e-8be0-5f18bba509dc")&gt;</var>
+<kw name="Wait and Get Text" library="CommonKeywords">
+<var>${actualtext}</var>
+<arg>${element}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230315 12:03:25.578" endtime="20230315 12:03:25.611"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${actualtext}</var>
+<arg>${locator}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230315 12:03:25.658" level="INFO">${actualtext} = Shopping cart (0)</msg>
+<status status="PASS" starttime="20230315 12:03:25.611" endtime="20230315 12:03:25.658"/>
+</kw>
+<msg timestamp="20230315 12:03:25.673" level="INFO">${actualtext} = Shopping cart (0)</msg>
+<status status="PASS" starttime="20230315 12:03:25.578" endtime="20230315 12:03:25.673"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>All Links Of Current Page : ${actualtext}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230315 12:03:25.673" level="INFO">All Links Of Current Page : Shopping cart (0)</msg>
+<status status="PASS" starttime="20230315 12:03:25.673" endtime="20230315 12:03:25.673"/>
+</kw>
+<status status="PASS" starttime="20230315 12:03:25.578" endtime="20230315 12:03:25.673"/>
+</iter>
+<iter>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="e3d5f07074dd03ad86aaff21ee7f7d28", element="44d010a8-10dc-40ec-9768-576f61f53958")&gt;</var>
+<kw name="Wait and Get Text" library="CommonKeywords">
+<var>${actualtext}</var>
+<arg>${element}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230315 12:03:25.673" endtime="20230315 12:03:25.705"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${actualtext}</var>
+<arg>${locator}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230315 12:03:25.752" level="INFO">${actualtext} = </msg>
+<status status="PASS" starttime="20230315 12:03:25.705" endtime="20230315 12:03:25.752"/>
+</kw>
+<msg timestamp="20230315 12:03:25.752" level="INFO">${actualtext} = </msg>
+<status status="PASS" starttime="20230315 12:03:25.673" endtime="20230315 12:03:25.752"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>All Links Of Current Page : ${actualtext}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230315 12:03:25.752" level="INFO">All Links Of Current Page : </msg>
+<status status="PASS" starttime="20230315 12:03:25.752" endtime="20230315 12:03:25.752"/>
+</kw>
+<status status="PASS" starttime="20230315 12:03:25.673" endtime="20230315 12:03:25.752"/>
+</iter>
+<iter>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="e3d5f07074dd03ad86aaff21ee7f7d28", element="d12e3261-008a-470e-8f24-89a4a5e37ec3")&gt;</var>
+<kw name="Wait and Get Text" library="CommonKeywords">
+<var>${actualtext}</var>
+<arg>${element}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230315 12:03:25.752" endtime="20230315 12:03:25.783"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${actualtext}</var>
+<arg>${locator}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230315 12:03:25.830" level="INFO">${actualtext} = Computers</msg>
+<status status="PASS" starttime="20230315 12:03:25.783" endtime="20230315 12:03:25.830"/>
+</kw>
+<msg timestamp="20230315 12:03:25.830" level="INFO">${actualtext} = Computers</msg>
+<status status="PASS" starttime="20230315 12:03:25.752" endtime="20230315 12:03:25.830"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>All Links Of Current Page : ${actualtext}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230315 12:03:25.830" level="INFO">All Links Of Current Page : Computers</msg>
+<status status="PASS" starttime="20230315 12:03:25.830" endtime="20230315 12:03:25.830"/>
+</kw>
+<status status="PASS" starttime="20230315 12:03:25.752" endtime="20230315 12:03:25.830"/>
+</iter>
+<iter>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="e3d5f07074dd03ad86aaff21ee7f7d28", element="250d2b85-4319-4df5-898e-211e6704ca2e")&gt;</var>
+<kw name="Wait and Get Text" library="CommonKeywords">
+<var>${actualtext}</var>
+<arg>${element}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20230315 12:03:31.057" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../ScreenShots/selenium-screenshot-1.png"&gt;&lt;img src="../ScreenShots/selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230315 12:03:31.057" level="FAIL">Element '&lt;selenium.webdriver.remote.webelement.WebElement (session="e3d5f07074dd03ad86aaff21ee7f7d28", element="250d2b85-4319-4df5-898e-211e6704ca2e")&gt;' not visible after 5 seconds.</msg>
+<status status="FAIL" starttime="20230315 12:03:25.846" endtime="20230315 12:03:31.057"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${actualtext}</var>
+<arg>${locator}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230315 12:03:31.057" endtime="20230315 12:03:31.057"/>
+</kw>
+<status status="FAIL" starttime="20230315 12:03:25.830" endtime="20230315 12:03:31.057"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>All Links Of Current Page : ${actualtext}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20230315 12:03:31.057" endtime="20230315 12:03:31.057"/>
+</kw>
+<status status="FAIL" starttime="20230315 12:03:25.830" endtime="20230315 12:03:31.057"/>
+</iter>
+<status status="FAIL" starttime="20230315 12:03:25.121" endtime="20230315 12:03:31.057"/>
+</for>
+<status status="FAIL" starttime="20230315 12:03:25.002" endtime="20230315 12:03:31.057"/>
+</kw>
+<doc>Fetching the Links in the Current Page</doc>
+<tag>RegressionTesting</tag>
+<status status="FAIL" starttime="20230315 12:03:25.002" endtime="20230315 12:03:31.057">Element '&lt;selenium.webdriver.remote.webelement.WebElement (session="e3d5f07074dd03ad86aaff21ee7f7d28", element="250d2b85-4319-4df5-898e-211e6704ca2e")&gt;' not visible after 5 seconds.</status>
+</test>
+<test id="s1-s2-t3" name="Scenario_3 : Verify User Can Mouse Over and click on the element" line="34">
+<kw name="MouseOver And Click Element" library="CommonKeywords">
+<arg>${notMobile_computerLink}</arg>
+<arg>${mouseOver_ele}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${mouseOver_locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230315 12:03:31.057" endtime="20230315 12:03:31.094"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${mouseOver_locator}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20230315 12:03:31.094" level="INFO">Simulating Mouse Over on element '//ul[@class='top-menu notmobile']//a[contains(text(),'Computers')]'.</msg>
+<status status="PASS" starttime="20230315 12:03:31.094" endtime="20230315 12:03:31.383"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${clickEle_locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230315 12:03:31.383" level="INFO">Clicking element '//ul[@class='top-menu notmobile']//a[contains(text(),'Computers')]/..//following-sibling::ul//a[contains(text(),'Desktops')]'.</msg>
+<status status="PASS" starttime="20230315 12:03:31.383" endtime="20230315 12:03:33.162"/>
+</kw>
+<status status="PASS" starttime="20230315 12:03:31.057" endtime="20230315 12:03:33.163"/>
+</kw>
+<kw name="Verify the Title of the Page" library="CommonKeywords">
+<arg>nopCommerce demo store. Desktops</arg>
+<kw name="Get Title" library="SeleniumLibrary">
+<var>${actualTitle}</var>
+<doc>Returns the title of the current page.</doc>
+<msg timestamp="20230315 12:03:33.180" level="INFO">${actualTitle} = nopCommerce demo store. Desktops</msg>
+<status status="PASS" starttime="20230315 12:03:33.165" endtime="20230315 12:03:33.180"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${expectedTitle}</arg>
+<arg>${actualTitle}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230315 12:03:33.180" endtime="20230315 12:03:33.180"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Expected Title : ${expectedTitle} and Actual Title : ${actualTitle}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230315 12:03:33.180" level="INFO">Expected Title : nopCommerce demo store. Desktops and Actual Title : nopCommerce demo store. Desktops</msg>
+<status status="PASS" starttime="20230315 12:03:33.180" endtime="20230315 12:03:33.180"/>
+</kw>
+<status status="PASS" starttime="20230315 12:03:33.165" endtime="20230315 12:03:33.180"/>
+</kw>
+<doc>Mouse Over on the Computer Menu and Click on Desktop</doc>
+<status status="PASS" starttime="20230315 12:03:31.057" endtime="20230315 12:03:33.183"/>
+</test>
+<test id="s1-s2-t4" name="Scenario_4 : Verify the Search Page" line="40">
+<kw name="Click On Registration Link" library="RegistrationPage">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>${link_Register}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20230315 12:03:33.188" level="INFO">Clicking link 'link:Register'.</msg>
+<status status="PASS" starttime="20230315 12:03:33.188" endtime="20230315 12:03:33.935"/>
+</kw>
+<status status="PASS" starttime="20230315 12:03:33.183" endtime="20230315 12:03:33.935"/>
+</kw>
+<kw name="Vefrify Search Field" library="RegistrationPage">
+<arg>nopCommerce demo store. Search</arg>
+<kw name="Wait and Input Text Box" library="CommonKeywords">
+<arg>Search store</arg>
+<arg>HI</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath://input[@placeholder="${placeholder_attributeName}"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230315 12:03:33.941" endtime="20230315 12:03:33.981"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath://input[@placeholder="${placeholder_attributeName}"]</arg>
+<arg>${input_text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230315 12:03:33.981" level="INFO">Typing text 'HI' into text field 'xpath://input[@placeholder="Search store"]'.</msg>
+<status status="PASS" starttime="20230315 12:03:33.981" endtime="20230315 12:03:34.170"/>
+</kw>
+<status status="PASS" starttime="20230315 12:03:33.939" endtime="20230315 12:03:34.170"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${search_button}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230315 12:03:34.172" level="INFO">Clicking button '//button[contains(text(),'Search')]'.</msg>
+<status status="PASS" starttime="20230315 12:03:34.170" endtime="20230315 12:03:34.883"/>
+</kw>
+<kw name="Verify the Title of the Page" library="CommonKeywords">
+<arg>nopCommerce demo store. Search</arg>
+<kw name="Get Title" library="SeleniumLibrary">
+<var>${actualTitle}</var>
+<doc>Returns the title of the current page.</doc>
+<msg timestamp="20230315 12:03:34.891" level="INFO">${actualTitle} = nopCommerce demo store. Search</msg>
+<status status="PASS" starttime="20230315 12:03:34.883" endtime="20230315 12:03:34.891"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${expectedTitle}</arg>
+<arg>${actualTitle}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230315 12:03:34.891" endtime="20230315 12:03:34.899"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Expected Title : ${expectedTitle} and Actual Title : ${actualTitle}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230315 12:03:34.899" level="INFO">Expected Title : nopCommerce demo store. Search and Actual Title : nopCommerce demo store. Search</msg>
+<status status="PASS" starttime="20230315 12:03:34.899" endtime="20230315 12:03:34.899"/>
+</kw>
+<status status="PASS" starttime="20230315 12:03:34.883" endtime="20230315 12:03:34.899"/>
+</kw>
+<status status="PASS" starttime="20230315 12:03:33.935" endtime="20230315 12:03:34.899"/>
+</kw>
+<kw name="Verify the Text for Invalid Input" library="RegistrationPage">
+<arg>Search term minimum length is 3 characters</arg>
+<kw name="Wait and Get Text" library="CommonKeywords">
+<var>${actualtext}</var>
+<arg>${warning_text}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230315 12:03:34.899" endtime="20230315 12:03:34.949"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${actualtext}</var>
+<arg>${locator}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230315 12:03:35.007" level="INFO">${actualtext} = Search term minimum length is 3 characters</msg>
+<status status="PASS" starttime="20230315 12:03:34.949" endtime="20230315 12:03:35.007"/>
+</kw>
+<msg timestamp="20230315 12:03:35.007" level="INFO">${actualtext} = Search term minimum length is 3 characters</msg>
+<status status="PASS" starttime="20230315 12:03:34.899" endtime="20230315 12:03:35.007"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${expectedtext}</arg>
+<arg>${actualtext}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230315 12:03:35.007" endtime="20230315 12:03:35.007"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${actualtext}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230315 12:03:35.012" level="INFO">Search term minimum length is 3 characters</msg>
+<status status="PASS" starttime="20230315 12:03:35.012" endtime="20230315 12:03:35.012"/>
+</kw>
+<status status="PASS" starttime="20230315 12:03:34.899" endtime="20230315 12:03:35.012"/>
+</kw>
+<doc>Working on Search Field and Button</doc>
+<status status="PASS" starttime="20230315 12:03:33.183" endtime="20230315 12:03:35.012"/>
+</test>
+<kw name="Close Test" library="SetupAndTeardown" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230315 12:03:35.012" endtime="20230315 12:03:37.334"/>
+</kw>
+<status status="PASS" starttime="20230315 12:03:35.012" endtime="20230315 12:03:37.334"/>
+</kw>
+<doc>Verify the Registration Page</doc>
+<status status="FAIL" starttime="20230315 12:03:17.647" endtime="20230315 12:03:37.334"/>
+</suite>
+<status status="FAIL" starttime="20230315 12:03:02.091" endtime="20230315 12:03:37.334"/>
+</suite>
+<statistics>
+<total>
+<stat pass="6" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">RegressionTesting</stat>
+<stat pass="1" fail="0" skip="0">SmokeTesting</stat>
+</tag>
+<suite>
+<stat pass="6" fail="1" skip="0" id="s1" name="TestCases">TestCases</stat>
+<stat pass="3" fail="0" skip="0" id="s1-s1" name="InvalidLoginCredentialsTestCases">TestCases.InvalidLoginCredentialsTestCases</stat>
+<stat pass="3" fail="1" skip="0" id="s1-s2" name="RegistrationPageTestCase">TestCases.RegistrationPageTestCase</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20230315 12:03:12.129" level="WARN">Multiple tests with name 'LoginTestWithExcel using' executed in suite 'TestCases.InvalidLoginCredentialsTestCases'.</msg>
+<msg timestamp="20230315 12:03:13.606" level="WARN">Multiple tests with name 'LoginTestWithExcel using' executed in suite 'TestCases.InvalidLoginCredentialsTestCases'.</msg>
+</errors>
+</robot>
