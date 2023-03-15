@@ -28,7 +28,8 @@ jobs:
     
     - name: run tests
       run: |
-        robot demo.nopcommerce.com/TestCases/*.robot
+        Remove-Item -Path .\Browser -Force -Recurse
+        invoke TestCases-robot 
           
     - name: Upload test results
       uses: actions/upload-artifact@v1
