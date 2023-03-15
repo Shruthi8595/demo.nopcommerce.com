@@ -28,7 +28,7 @@ jobs:
     
     - name: run tests
       run: |
-        robot TestCases.robot
+        robot TestCases\*.robot
           
     - name: Upload test results
       uses: actions/upload-artifact@v1
